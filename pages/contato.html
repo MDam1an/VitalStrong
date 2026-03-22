@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Vital Strong</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contato-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:5rem; align-items:start; }
+    .info-item { display:flex; align-items:flex-start; gap:1.25rem; padding:1.25rem; background:var(--black-3); border:1px solid rgba(255,255,255,0.06); margin-bottom:1rem; transition:var(--transition); }
+    .info-item:hover { border-color:rgba(232,37,26,0.3); }
+    .info-icon { width:44px; height:44px; background:rgba(232,37,26,0.1); display:flex; align-items:center; justify-content:center; font-size:1.25rem; flex-shrink:0; }
+    .info-label { font-family:var(--font-display); font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--red); margin-bottom:0.25rem; }
+    .info-value { font-size:0.95rem; color:var(--white); }
+    .info-sub { font-size:0.8rem; color:var(--gray); margin-top:2px; }
+    .horario-row { display:flex; justify-content:space-between; align-items:center; padding:0.75rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .horario-row:last-child { border-bottom:none; }
+    .h-dia { font-size:0.9rem; color:var(--gray-light); }
+    .h-hora { font-family:var(--font-display); font-size:0.9rem; font-weight:700; }
+    .h-status { font-family:var(--font-display); font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:2px 8px; background:rgba(37,211,102,0.12); color:#25D366; }
+    .form-group { display:flex; flex-direction:column; gap:6px; }
+    .form-group label { font-family:var(--font-display); font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gray); }
+    .form-group input, .form-group select, .form-group textarea { background:var(--black-3); border:1px solid rgba(255,255,255,0.1); color:var(--white); padding:0.875rem 1rem; font-family:var(--font-body); font-size:0.95rem; outline:none; resize:vertical; transition:var(--transition); }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color:var(--red); }
+    .form-group input::placeholder, .form-group textarea::placeholder { color:var(--gray); }
+    .form-group select option { background:var(--black-3); }
+    @media (max-width:768px) { .contato-grid { grid-template-columns:1fr; gap:3rem; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:100%">
+    <a href="../index.html" class="nav-logo"><img src="../assets/logo.jpg" alt="Vital Strong"></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="planos.html">Planos</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+      <li><a href="contato.html" class="active">Contato</a></li>
+      <li><a href="https://wa.me/5548999999999" target="_blank" class="nav-cta">Quero conhecer</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html">Início</a>
+  <a href="sobre.html">Sobre</a>
+  <a href="planos.html">Planos</a>
+  <a href="produtos.html">Produtos</a>
+  <a href="../index.html#estrutura">Estrutura</a>
+  <a href="contato.html">Contato</a>
+  <a href="https://wa.me/5548999999999" target="_blank" class="btn-primary" style="text-align:center;">Falar no WhatsApp</a>
+</div>
+
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1">
+    <span class="section-tag">Fale com a gente</span>
+    <h1 class="page-hero-title">Entre em<br><span style="color:var(--red)">Contato</span></h1>
+    <p style="color:var(--gray-light);font-size:1.05rem;margin-top:1rem">Estamos prontos para te atender e receber você na Vital Strong.</p>
+  </div>
+</section>
+
+<!-- CONTATO PRINCIPAL -->
+<section style="padding:96px 0;background:var(--black-2)">
+  <div class="container">
+    <div class="contato-grid">
+      <div class="reveal">
+        <span class="section-tag">Informações</span>
+        <h2 class="section-title" style="font-size:clamp(2rem,4vw,2.75rem)">Estamos prontos para <span>te atender</span></h2>
+        <p style="margin-bottom:2rem;color:var(--gray-light)">Fale pelo WhatsApp, Instagram ou venha pessoalmente conhecer a Vital Strong. Será um prazer te receber!</p>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Endereço</div>
+            <div class="info-value">Rua Exemplo, 123 — Tubarão/SC</div>
+            <div class="info-sub">Próximo ao centro da cidade</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📱</div>
+          <div>
+            <div class="info-label">WhatsApp</div>
+            <div class="info-value">(48) 9 9999-9999</div>
+            <div class="info-sub">Resposta rápida · Seg a Sáb</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📷</div>
+          <div>
+            <div class="info-label">Instagram</div>
+            <div class="info-value">@vitalstrongoficial</div>
+            <div class="info-sub">Siga para novidades e promoções</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div>
+            <div class="info-label">E-mail</div>
+            <div class="info-value">contato@vitalstrong.com.br</div>
+            <div class="info-sub">Para dúvidas e propostas comerciais</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:0.75rem;margin-top:1.5rem;flex-wrap:wrap">
+          <a href="https://wa.me/5548999999999" class="btn btn-whatsapp" target="_blank">💬 WhatsApp</a>
+          <a href="https://instagram.com/vitalstrong" class="btn btn-secondary" target="_blank">📷 Instagram</a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div style="background:var(--black-3);border:1px solid rgba(255,255,255,0.07);padding:2rem">
+          <h3 style="font-family:var(--font-display);font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid rgba(232,37,26,0.2)">⏰ Horário de funcionamento</h3>
+          <div class="horario-row"><span class="h-dia">Segunda-feira</span><span class="h-hora">05h – 23h</span><span class="h-status">Aberto</span></div>
+          <div class="horario-row"><span class="h-dia">Terça-feira</span><span class="h-hora">05h – 23h</span><span class="h-status">Aberto</span></div>
+          <div class="horario-row"><span class="h-dia">Quarta-feira</span><span class="h-hora">05h – 23h</span><span class="h-status">Aberto</span></div>
+          <div class="horario-row"><span class="h-dia">Quinta-feira</span><span class="h-hora">05h – 23h</span><span class="h-status">Aberto</span></div>
+          <div class="horario-row"><span class="h-dia">Sexta-feira</span><span class="h-hora">05h – 23h</span><span class="h-status">Aberto</span></div>
+          <div class="horario-row"><span class="h-dia">Sábado</span><span class="h-hora">07h – 18h</span><span class="h-status">Aberto</span></div>
+          <div class="horario-row"><span class="h-dia">Domingo</span><span class="h-hora">08h – 13h</span><span class="h-status">Aberto</span></div>
+        </div>
+        <div style="margin-top:1.25rem;padding:1.5rem;background:rgba(232,37,26,0.07);border:1px solid rgba(232,37,26,0.2)">
+          <p style="font-family:var(--font-display);font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);margin-bottom:0.5rem">Atendimento rápido</p>
+          <p style="font-size:0.875rem;color:var(--gray-light);line-height:1.6;margin-bottom:1.25rem">O WhatsApp é a forma mais rápida de tirar dúvidas, agendar visita ou se matricular.</p>
+          <a href="https://wa.me/5548999999999?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20Vital%20Strong" class="btn btn-whatsapp" target="_blank">Falar agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section style="background:var(--black)">
+  <div class="container" style="padding:0 24px 96px">
+    <div style="text-align:center;padding:80px 0 48px" class="reveal">
+      <span class="section-tag" style="justify-content:center">Localização</span>
+      <h2 class="section-title">Como <span>chegar</span></h2>
+    </div>
+    <div class="reveal">
+      <iframe
+        style="width:100%;height:420px;border:none;display:block;filter:grayscale(70%) invert(85%) hue-rotate(180deg);opacity:0.85"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56640.7!2d-49.0170!3d-28.4782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d86ecf1e7a8d1d%3A0x1!2sTubar%C3%A3o%2C%20SC!5e0!3m2!1spt!2sbr!4v1"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Vital Strong - Localização">
+      </iframe>
+      <div style="margin-top:1rem;padding:1.25rem 1.5rem;background:var(--black-2);border:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <span style="font-size:1.5rem">📍</span>
+          <div>
+            <div style="font-family:var(--font-display);font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);margin-bottom:2px">Endereço</div>
+            <div style="font-size:0.9rem;color:var(--gray-light)">Rua Exemplo, 123 — Tubarão/SC — CEP 88704-000</div>
+          </div>
+        </div>
+        <a href="https://maps.google.com?q=Tubarao+SC" class="btn btn-secondary" target="_blank" style="font-size:0.8rem">Abrir no Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section style="padding:96px 0;background:var(--black-2)">
+  <div class="container">
+    <div style="max-width:680px;margin:0 auto">
+      <div class="reveal" style="text-align:center;margin-bottom:3rem">
+        <span class="section-tag" style="justify-content:center">Mensagem</span>
+        <h2 class="section-title">Mande sua <span>mensagem</span></h2>
+        <p style="color:var(--gray);margin-top:0.75rem">Preencha o formulário e entraremos em contato em breve.</p>
+      </div>
+      <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem" id="contactForm">
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" placeholder="Seu nome completo" id="f-nome">
+        </div>
+        <div class="form-group">
+          <label>Telefone / WhatsApp</label>
+          <input type="tel" placeholder="(48) 9 9999-9999" id="f-tel">
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label>E-mail</label>
+          <input type="email" placeholder="seu@email.com" id="f-email">
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label>Assunto</label>
+          <select id="f-assunto">
+            <option value="">Selecione o assunto</option>
+            <option>Quero me matricular</option>
+            <option>Dúvidas sobre planos</option>
+            <option>Produtos e suplementos</option>
+            <option>Agendar uma visita</option>
+            <option>Outro assunto</option>
+          </select>
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label>Mensagem</label>
+          <textarea rows="5" placeholder="Escreva sua mensagem aqui..." id="f-msg"></textarea>
+        </div>
+        <div style="grid-column:1/-1;text-align:center">
+          <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="submitForm(this)">Enviar mensagem</button>
+          <p style="margin-top:1rem;font-size:0.8rem;color:var(--gray)">Ou fale diretamente pelo <a href="https://wa.me/5548999999999" style="color:var(--red)" target="_blank">WhatsApp</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:var(--black-2);padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,0.06)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.06)" class="footer-main-grid">
+      <div>
+        <a href="../index.html" style="display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;text-decoration:none">
+          <img src="../assets/logo.jpg" alt="Vital Strong" style="height:36px;width:auto">
+          <span style="font-family:var(--font-display);font-size:1.2rem;font-weight:900;text-transform:uppercase;color:#fff">vital.<span style="color:var(--red)">STRONG</span></span>
+        </a>
+        <p style="color:var(--gray);font-size:0.875rem;line-height:1.7;max-width:260px">Seja mais forte que o seu maior obstáculo. Referência em musculação há mais de 11 anos.</p>
+      </div>
+      <div>
+        <p style="font-family:var(--font-display);font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:1rem">Páginas</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem">
+          <li><a href="../index.html" style="color:var(--gray);font-size:0.875rem">Início</a></li>
+          <li><a href="sobre.html" style="color:var(--gray);font-size:0.875rem">Sobre</a></li>
+          <li><a href="planos.html" style="color:var(--gray);font-size:0.875rem">Planos</a></li>
+          <li><a href="produtos.html" style="color:var(--gray);font-size:0.875rem">Produtos</a></li>
+          <li><a href="contato.html" style="color:var(--gray);font-size:0.875rem">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-family:var(--font-display);font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:1rem">Horários</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem">
+          <li style="color:var(--gray);font-size:0.875rem">Seg–Sex: 05h – 23h</li>
+          <li style="color:var(--gray);font-size:0.875rem">Sábado: 07h – 18h</li>
+          <li style="color:var(--gray);font-size:0.875rem">Domingo: 08h – 13h</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-family:var(--font-display);font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:1rem">Contato</p>
+        <div style="display:flex;flex-direction:column;gap:0.6rem">
+          <span style="color:var(--gray);font-size:0.875rem">📍 Rua Exemplo, 123 — Tubarão/SC</span>
+          <span style="color:var(--gray);font-size:0.875rem">📱 (48) 9 9999-9999</span>
+          <span style="color:var(--gray);font-size:0.875rem">📷 @vitalstrongoficial</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem">
+      <span style="color:var(--gray);font-size:0.8rem">© 2025 Vital Strong. Todos os direitos reservados.</span>
+      <span style="color:var(--gray);font-size:0.8rem">Seja mais forte que o seu maior obstáculo.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+function submitForm(btn) {
+  const nome = document.getElementById('f-nome').value;
+  const msg = document.getElementById('f-msg').value;
+  if (!nome || !msg) { alert('Preencha ao menos o nome e a mensagem.'); return; }
+  const text = encodeURIComponent('Olá! Me chamo ' + nome + '.\n\n' + msg);
+  window.open('https://wa.me/5548999999999?text=' + text, '_blank');
+  btn.textContent = '✓ Redirecionando para WhatsApp...';
+  btn.style.background = '#25D366';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>

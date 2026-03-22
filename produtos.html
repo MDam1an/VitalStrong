@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos — Vital Strong</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .produto-card-full {
+      background: var(--black-3);
+      overflow: hidden;
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+    }
+    .produto-card-full:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .produto-img-full {
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: var(--black-4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .produto-img-full .placeholder {
+      font-family: var(--font-display);
+      font-size: 64px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.06);
+      letter-spacing: -0.04em;
+    }
+    .produto-img-full .icon-placeholder {
+      font-size: 48px;
+      color: rgba(232,37,26,0.25);
+    }
+    .produto-label {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+    .produto-info-full {
+      padding: 24px;
+    }
+    .produto-tag {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+    .produto-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .produto-desc-full {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .produtos-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .suplementos-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-top: 40px;
+    }
+    .suplemento-item {
+      background: var(--black-3);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: var(--transition);
+    }
+    .suplemento-item:hover { background: var(--black-4); }
+    .suplemento-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(232,37,26,0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red);
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .suplemento-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .suplemento-desc { font-size: 13px; color: var(--gray); }
+    @media (max-width: 768px) {
+      .produtos-full-grid { grid-template-columns: 1fr 1fr; }
+      .suplementos-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .produtos-full-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.jpg" alt="Vital Strong" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="planos.html">Planos</a></li>
+      <li><a href="produtos.html" class="active">Produtos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="https://wa.me/5548999999999" target="_blank" class="nav-cta">Quero conhecer</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="section-tag">Marca oficial</span>
+    <h1 class="page-hero-title">Produtos<br><span style="color:var(--red);">Vital Strong</span></h1>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section style="padding:72px 0 0;">
+  <div class="container reveal" style="text-align:center;max-width:640px;margin:0 auto;">
+    <span class="section-tag" style="justify-content:center;">Identidade de treino</span>
+    <h2 class="section-title">Leve a força da<br><span>Vital Strong</span> para o<br>seu dia a dia</h2>
+    <p style="color:var(--gray);font-size:16px;line-height:1.7;margin-top:16px;">Conheça os produtos oficiais da marca Vital Strong. Qualidade, identidade e atitude para dentro e fora da academia.</p>
+  </div>
+</section>
+
+<!-- PRODUTOS VESTUÁRIO -->
+<section style="padding:72px 0;">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">Vestuário</span>
+      <h2 class="section-title" style="font-size:clamp(32px,5vw,52px);">Linha de<br><span>roupas Vital</span></h2>
+    </div>
+    <div class="produtos-full-grid">
+      <div class="produto-card-full reveal">
+        <div class="produto-img-full" style="background: linear-gradient(135deg, #1a1a1a, #2a1010);">
+          <span class="produto-label">Novo</span>
+          <i class="fas fa-tshirt icon-placeholder"></i>
+        </div>
+        <div class="produto-info-full">
+          <div class="produto-tag">Vestuário</div>
+          <div class="produto-title">Camiseta Fit Vital</div>
+          <p class="produto-desc-full">Camiseta com identidade Vital Strong, corte slim fit e tecido de qualidade para os seus treinos.</p>
+          <a href="https://wa.me/5548999999999?text=Olá! Tenho interesse na Camiseta Fit Vital." target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Consultar
+          </a>
+        </div>
+      </div>
+      <div class="produto-card-full reveal">
+        <div class="produto-img-full" style="background: linear-gradient(135deg, #111, #1c1c1c);">
+          <i class="fas fa-user-tie icon-placeholder"></i>
+        </div>
+        <div class="produto-info-full">
+          <div class="produto-tag">Vestuário</div>
+          <div class="produto-title">Calção Fit Vital</div>
+          <p class="produto-desc-full">Calção esportivo com estampa oficial da marca, confortável e resistente para qualquer treino.</p>
+          <a href="https://wa.me/5548999999999?text=Olá! Tenho interesse no Calção Fit Vital." target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Consultar
+          </a>
+        </div>
+      </div>
+      <div class="produto-card-full reveal">
+        <div class="produto-img-full" style="background: linear-gradient(135deg, #0d0d0d, #1a0d0d);">
+          <span class="produto-label">Destaque</span>
+          <i class="fas fa-mitten icon-placeholder"></i>
+        </div>
+        <div class="produto-info-full">
+          <div class="produto-tag">Vestuário</div>
+          <div class="produto-title">Moletom Vital</div>
+          <p class="produto-desc-full">Moletom com a identidade visual Vital Strong. Ideal para os dias frios antes ou depois do treino.</p>
+          <a href="https://wa.me/5548999999999?text=Olá! Tenho interesse no Moletom Vital." target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Consultar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACESSÓRIOS -->
+<section style="background:var(--black-2);padding:72px 0;">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">Acessórios</span>
+      <h2 class="section-title" style="font-size:clamp(32px,5vw,52px);">Acessórios<br><span>da marca</span></h2>
+    </div>
+    <div class="produtos-full-grid">
+      <div class="produto-card-full reveal" style="background:var(--black-4);">
+        <div class="produto-img-full" style="background: linear-gradient(135deg, #111, #1a1a1a);">
+          <i class="fas fa-hat-cowboy icon-placeholder"></i>
+        </div>
+        <div class="produto-info-full">
+          <div class="produto-tag">Acessório</div>
+          <div class="produto-title">Boné Vital</div>
+          <p class="produto-desc-full">Boné snapback com o logo Vital Strong bordado. Qualidade e estilo para o seu dia a dia.</p>
+          <a href="https://wa.me/5548999999999?text=Olá! Tenho interesse no Boné Vital." target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Consultar
+          </a>
+        </div>
+      </div>
+      <div class="produto-card-full reveal" style="background:var(--black-4);">
+        <div class="produto-img-full" style="background: linear-gradient(135deg, #0d0d1a, #0d1a0d);">
+          <i class="fas fa-tint icon-placeholder"></i>
+        </div>
+        <div class="produto-info-full">
+          <div class="produto-tag">Acessório</div>
+          <div class="produto-title">Garrafa d'água Vital</div>
+          <p class="produto-desc-full">Garrafa de alta qualidade com identidade Vital Strong. Sua companheira indispensável no treino.</p>
+          <a href="https://wa.me/5548999999999?text=Olá! Tenho interesse na Garrafa Vital." target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Consultar
+          </a>
+        </div>
+      </div>
+      <div class="produto-card-full reveal" style="background:var(--black-4);">
+        <div class="produto-img-full" style="background: linear-gradient(135deg, #1a0d00, #0d0d0d);">
+          <i class="fas fa-coffee icon-placeholder"></i>
+        </div>
+        <div class="produto-info-full">
+          <div class="produto-tag">Acessório</div>
+          <div class="produto-title">Caneca Personalizada</div>
+          <p class="produto-desc-full">Caneca com design exclusivo Vital Strong. Para os fãs que querem a marca em todo momento.</p>
+          <a href="https://wa.me/5548999999999?text=Olá! Tenho interesse na Caneca Vital." target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Consultar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPLEMENTOS -->
+<section style="padding:96px 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;" class="sobre-grid">
+      <div class="reveal">
+        <span class="section-tag">Nutrição</span>
+        <h2 class="section-title">Linha de<br><span>suplementos</span></h2>
+        <p style="margin-bottom:24px;">Na Vital Strong, você encontra uma seleção de suplementos com produtos de marcas confiáveis e qualidade reconhecida no mercado, para apoiar sua rotina de treino e evolução.</p>
+        <p style="margin-bottom:40px;">Trabalhamos apenas com marcas de referência para garantir que você tenha o melhor na sua nutrição.</p>
+        <a href="https://wa.me/5548999999999?text=Olá! Quero saber mais sobre os suplementos disponíveis na Vital Strong." target="_blank" class="btn btn-primary">
+          <i class="fab fa-whatsapp"></i> Consultar disponibilidade
+        </a>
+      </div>
+      <div class="reveal">
+        <div class="suplementos-list">
+          <div class="suplemento-item">
+            <div class="suplemento-icon"><i class="fas fa-cubes"></i></div>
+            <div>
+              <div class="suplemento-name">Whey Protein</div>
+              <div class="suplemento-desc">Proteína de alta qualidade</div>
+            </div>
+          </div>
+          <div class="suplemento-item">
+            <div class="suplemento-icon"><i class="fas fa-bolt"></i></div>
+            <div>
+              <div class="suplemento-name">Creatina</div>
+              <div class="suplemento-desc">Força e performance</div>
+            </div>
+          </div>
+          <div class="suplemento-item">
+            <div class="suplemento-icon"><i class="fas fa-fire-alt"></i></div>
+            <div>
+              <div class="suplemento-name">Pré-treino</div>
+              <div class="suplemento-desc">Energia e foco máximos</div>
+            </div>
+          </div>
+          <div class="suplemento-item">
+            <div class="suplemento-icon"><i class="fas fa-apple-alt"></i></div>
+            <div>
+              <div class="suplemento-name">BCAA</div>
+              <div class="suplemento-desc">Recuperação muscular</div>
+            </div>
+          </div>
+          <div class="suplemento-item">
+            <div class="suplemento-icon"><i class="fas fa-pills"></i></div>
+            <div>
+              <div class="suplemento-name">Multivitamínico</div>
+              <div class="suplemento-desc">Saúde e imunidade</div>
+            </div>
+          </div>
+          <div class="suplemento-item">
+            <div class="suplemento-icon"><i class="fas fa-plus-circle"></i></div>
+            <div>
+              <div class="suplemento-name">E muito mais</div>
+              <div class="suplemento-desc">Consulte disponibilidade</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final">
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="section-tag" style="justify-content:center;">Vista a camisa</span>
+    <h2 class="section-title" style="text-align:center;">Seja parte da<br>Vital Strong</h2>
+    <p class="section-subtitle" style="text-align:center;margin:16px auto 48px;">Produtos oficiais disponíveis na academia. Venha conferir ou consulte pelo WhatsApp.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/5548999999999?text=Olá! Gostaria de saber mais sobre os produtos Vital Strong." target="_blank" class="btn" style="background:var(--white);color:var(--red);font-weight:700;">
+        <i class="fab fa-whatsapp"></i> Consultar produtos
+      </a>
+      <a href="planos.html" class="btn btn-outline">Ver planos</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo"><img src="assets/logo.jpg" alt="Vital Strong" /></div>
+        <p class="footer-brand-text">Seja mais forte que o seu maior obstáculo. Referência em musculação há mais de 11 anos.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/5548999999999" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Navegação</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre nós</a></li>
+          <li><a href="planos.html">Planos</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Planos</div>
+        <ul class="footer-links">
+          <li><a href="planos.html">Plano Essencial</a></li>
+          <li><a href="planos.html">Plano Plus</a></li>
+          <li><a href="planos.html">Plano Premium</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contato</div>
+        <div class="footer-info-item">
+          <span class="footer-info-icon"><i class="fas fa-map-marker-alt"></i></span>
+          <span class="footer-info-text">Rua da Academia, 123<br>Sua cidade – SC</span>
+        </div>
+        <div class="footer-info-item">
+          <span class="footer-info-icon"><i class="fab fa-whatsapp"></i></span>
+          <span class="footer-info-text">(48) 9 9999-9999</span>
+        </div>
+        <div class="footer-info-item">
+          <span class="footer-info-icon"><i class="fas fa-clock"></i></span>
+          <span class="footer-info-text">Seg–Sex: 06h–22h<br>Sáb: 08h–14h</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Vital Strong. Todos os direitos reservados.</span>
+      <span>Seja mais forte que o seu maior obstáculo.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5548999999999" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

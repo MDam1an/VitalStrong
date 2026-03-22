@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato — Vital Strong</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.jpg" alt="Vital Strong" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="planos.html">Planos</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+      <li><a href="contato.html" class="active">Contato</a></li>
+      <li><a href="https://wa.me/5548999999999" target="_blank" class="nav-cta">Quero conhecer</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="section-tag">Fale conosco</span>
+    <h1 class="page-hero-title">Entre em<br><span style="color:var(--red);">contato</span></h1>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section style="padding:96px 0;">
+  <div class="container">
+    <div class="contato-grid">
+      <!-- INFO -->
+      <div class="reveal">
+        <span class="section-tag">Como chegar</span>
+        <h2 class="section-title" style="font-size:clamp(32px,5vw,52px);margin-bottom:40px;">Estamos<br><span>esperando você</span></h2>
+
+        <div class="contato-info-item">
+          <div class="contato-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contato-info-title">Endereço</div>
+            <div class="contato-info-value">Rua da Academia, 123 — Sua cidade, SC<br>CEP: 88000-000</div>
+          </div>
+        </div>
+
+        <div class="contato-info-item">
+          <div class="contato-icon-wrap"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <div class="contato-info-title">WhatsApp</div>
+            <div class="contato-info-value">
+              <a href="https://wa.me/5548999999999" target="_blank" style="color:var(--white);text-decoration:underline;">(48) 9 9999-9999</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-info-item">
+          <div class="contato-icon-wrap"><i class="fab fa-instagram"></i></div>
+          <div>
+            <div class="contato-info-title">Instagram</div>
+            <div class="contato-info-value">
+              <a href="#" target="_blank" style="color:var(--white);text-decoration:underline;">@vitalstrong</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-info-item">
+          <div class="contato-icon-wrap"><i class="fas fa-clock"></i></div>
+          <div>
+            <div class="contato-info-title">Horário de funcionamento</div>
+            <div class="contato-info-value">
+              Segunda a Sexta: 06h às 22h<br>
+              Sábado: 08h às 14h<br>
+              Domingo e feriados: Fechado
+            </div>
+          </div>
+        </div>
+
+        <!-- MAPA PLACEHOLDER -->
+        <div style="margin-top:40px;background:var(--black-3);border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);">
+          <div style="padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);">
+              <i class="fas fa-map" style="color:var(--red);margin-right:8px;"></i> Localização
+            </div>
+          </div>
+          <!-- Integre aqui seu Google Maps iframe -->
+          <div style="height:220px;background:linear-gradient(135deg,var(--black-4),var(--black-3));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+            <i class="fas fa-map-marker-alt" style="font-size:36px;color:var(--red);opacity:0.4;"></i>
+            <div style="font-family:var(--font-display);font-size:14px;color:var(--gray);text-align:center;letter-spacing:0.1em;text-transform:uppercase;">
+              Substitua este bloco pelo<br>iframe do Google Maps
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULÁRIO -->
+      <div class="reveal">
+        <div class="contato-form">
+          <div style="margin-bottom:36px;">
+            <span class="section-tag">Envie uma mensagem</span>
+            <h3 style="font-size:28px;color:var(--white);text-transform:uppercase;font-family:var(--font-display);font-weight:900;">Fale com<br><span style="color:var(--red);">a gente</span></h3>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Seu nome</label>
+            <input type="text" class="form-input" placeholder="Nome completo" id="nome" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">WhatsApp</label>
+            <input type="tel" class="form-input" placeholder="(48) 9 9999-9999" id="telefone" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Assunto</label>
+            <select class="form-input" id="assunto" style="cursor:pointer;appearance:none;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23888%22><path d=%22M7 10l5 5 5-5z%22/></svg>');background-repeat:no-repeat;background-position:right 16px center;background-size:20px;">
+              <option value="">Selecione um assunto</option>
+              <option>Informações sobre planos</option>
+              <option>Produtos Vital Strong</option>
+              <option>Suplementos</option>
+              <option>Outros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mensagem</label>
+            <textarea class="form-textarea" placeholder="Como podemos te ajudar?" id="mensagem"></textarea>
+          </div>
+          <button onclick="enviarWhatsApp()" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">
+            <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
+          </button>
+          <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:16px;">
+            Você será redirecionado para o WhatsApp com sua mensagem.
+          </p>
+        </div>
+
+        <!-- WHATSAPP DIRETO -->
+        <div style="background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.2);border-radius:4px;padding:24px;margin-top:16px;display:flex;gap:16px;align-items:center;">
+          <div style="width:48px;height:48px;background:rgba(37,211,102,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:#25D366;flex-shrink:0;">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div>
+            <div style="font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--white);text-transform:uppercase;margin-bottom:4px;">Atendimento rápido</div>
+            <div style="font-size:13px;color:var(--gray);">Prefere falar direto? Clique e chame no WhatsApp agora mesmo.</div>
+          </div>
+          <a href="https://wa.me/5548999999999" target="_blank" class="btn" style="background:#25D366;color:var(--white);flex-shrink:0;padding:10px 20px;font-size:14px;">
+            Chamar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo"><img src="assets/logo.jpg" alt="Vital Strong" /></div>
+        <p class="footer-brand-text">Seja mais forte que o seu maior obstáculo. Referência em musculação há mais de 11 anos.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/5548999999999" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Navegação</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre nós</a></li>
+          <li><a href="planos.html">Planos</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Planos</div>
+        <ul class="footer-links">
+          <li><a href="planos.html">Plano Essencial</a></li>
+          <li><a href="planos.html">Plano Plus</a></li>
+          <li><a href="planos.html">Plano Premium</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contato</div>
+        <div class="footer-info-item">
+          <span class="footer-info-icon"><i class="fas fa-map-marker-alt"></i></span>
+          <span class="footer-info-text">Rua da Academia, 123<br>Sua cidade – SC</span>
+        </div>
+        <div class="footer-info-item">
+          <span class="footer-info-icon"><i class="fab fa-whatsapp"></i></span>
+          <span class="footer-info-text">(48) 9 9999-9999</span>
+        </div>
+        <div class="footer-info-item">
+          <span class="footer-info-icon"><i class="fas fa-clock"></i></span>
+          <span class="footer-info-text">Seg–Sex: 06h–22h<br>Sáb: 08h–14h</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Vital Strong. Todos os direitos reservados.</span>
+      <span>Seja mais forte que o seu maior obstáculo.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5548999999999" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+<script>
+function enviarWhatsApp() {
+  const nome = document.getElementById('nome').value.trim();
+  const telefone = document.getElementById('telefone').value.trim();
+  const assunto = document.getElementById('assunto').value;
+  const mensagem = document.getElementById('mensagem').value.trim();
+
+  if (!nome) { alert('Por favor, informe seu nome.'); return; }
+
+  let texto = `Olá! Meu nome é ${nome}.`;
+  if (assunto) texto += `\nAssunto: ${assunto}.`;
+  if (mensagem) texto += `\n\nMensagem: ${mensagem}`;
+  if (telefone) texto += `\n\nMeu WhatsApp: ${telefone}`;
+
+  window.open(`https://wa.me/5548999999999?text=${encodeURIComponent(texto)}`, '_blank');
+}
+</script>
+</body>
+</html>
